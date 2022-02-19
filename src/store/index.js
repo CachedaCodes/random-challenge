@@ -11,15 +11,7 @@ export const store = createStore({
         minMoney: 0,
         maxMoney: 0
       },
-      rooms: [{
-        name: 'Nombre',
-        width: 2,
-        length: 3
-      },{
-        name: 'Nombre',
-        width: 2,
-        length: 3}
-      ],
+      rooms: [],
       roomsTemplate: [
           'Recibidor',
           'Cocina',
