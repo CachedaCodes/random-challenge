@@ -50,7 +50,7 @@ export const store = createStore({
         state.rooms.push({
           name: state.useTemplate ? current : `room_${current + 1}`,
           width: randomBetweenRangeAndMultiple(state.parameters.minSize, state.parameters.maxSize),
-          length: randomBetweenRangeAndMultiple(state.parameters.maxSize, state.parameters.maxSize),
+          length: randomBetweenRangeAndMultiple(state.parameters.minSize, state.parameters.maxSize),
           money: randomBetweenRangeAndMultiple(state.parameters.minMoney, state.parameters.maxMoney, 100),
         });
       })
@@ -59,7 +59,7 @@ export const store = createStore({
       state.rooms.push({
           name: 'New Room',
           width: randomBetweenRangeAndMultiple(state.parameters.minSize, state.parameters.maxSize),
-          length: randomBetweenRangeAndMultiple(state.parameters.maxSize, state.parameters.maxSize),
+          length: randomBetweenRangeAndMultiple(state.parameters.minSize, state.parameters.maxSize),
           money: randomBetweenRangeAndMultiple(state.parameters.minMoney, state.parameters.maxMoney, 100),
       });
     }
